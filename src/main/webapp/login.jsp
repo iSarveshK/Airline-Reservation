@@ -13,7 +13,7 @@
     <div class="login-page">
         <div class="form">
           <form class="login-form" action="login.airline" method="post">
-            <input type="email"  name="email"placeholder="Admin ID" required/>
+            <input type="email"  name="email" placeholder="Admin ID" required/>
             <input type="password" name="password" placeholder="Password" required/>
             <p class="message"><a href="admin_forgot.html">Forgot Password? </a></p> <br>
             <button type="submit">Login</button>
