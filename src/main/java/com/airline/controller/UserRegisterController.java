@@ -24,14 +24,13 @@ public class UserRegisterController {
 		user1.setFirstName(dto.getFirstName());
 		user1.setLastName(dto.getLastName());
 		user1.setEmail(dto.getEmail());
-		user1.setPassword(dto.getPassword());
+		user1.setPassword(dto.getFpassword());
 		user1.setDateOfBirth(LocalDate.parse(dto.getDateOfBirth()));
 		user1.setPhone(dto.getPhone());
 		user1.setSecurityQuestionUser(dto.getSecurityQuestionUser());
 		user1.setSecurityAnswerUser(dto.getSecurityAnswerUser());
 
 		userRegisterService.register(user1);
-		
 		
 		 return "Confirmation.jsp";
 		

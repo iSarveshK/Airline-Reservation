@@ -1,6 +1,5 @@
 package com.airline.dto;
 
-import javax.persistence.Column;
 
 public class UserDto {
 
@@ -8,9 +7,10 @@ public class UserDto {
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String password;
+	private String fpassword;
+	private String spassword;
 	public String dateOfBirth;
-	private int phone;
+	private long phone;
 	private String securityQuestionUser;
 	private String securityAnswerUser;
 	
@@ -33,22 +33,17 @@ public class UserDto {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
 	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public int getPhone() {
+	public long getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(long phone) {
 		this.phone = phone;
 	}
 	public String getSecurityQuestionUser() {
@@ -62,6 +57,18 @@ public class UserDto {
 	}
 	public void setSecurityAnswerUser(String securityAnswerUser) {
 		this.securityAnswerUser = securityAnswerUser;
+	}
+	public String getFpassword() {
+		return fpassword;
+	}
+	public void setFpassword(String fpassword) {
+		this.fpassword = fpassword;
+	}
+	public String getSpassword() {
+		return spassword;
+	}
+	public void setSpassword(String spassword) {
+		this.spassword = spassword;
 	}
 	
 	

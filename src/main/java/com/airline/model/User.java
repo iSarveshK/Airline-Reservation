@@ -39,7 +39,7 @@ public class User {
 	private LocalDate dateOfBirth;
 	
 	@Column(name="PHONE_NO")
-	private int phone;
+	private long phone;
 	
 	@Column(name="SECURITY_QUESTION_USER")
 	private String securityQuestionUser;
@@ -114,11 +114,11 @@ public class User {
 		this.password = password;
 	}
 
-	public int getPhone() {
+	public long getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(long phone) {
 		this.phone = phone;
 	}
 	

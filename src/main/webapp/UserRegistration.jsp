@@ -16,8 +16,8 @@
             <input type="text" name="firstName" placeholder="First Name" required/>
             <input type="text" name="lastName" placeholder="Last Name" required/>
             <input type="email" name="email" placeholder="E-MAIL" required/>
-            <input type="password" name="password" placeholder="Password" required/>
-            <input type="password" name="password" placeholder="Retype Pasword" required/>
+            <input type="password" name="fpassword" placeholder="Password" required/>
+            <input type="password" name="spassword" placeholder="Retype Pasword" required/>
             <input type="date" name="dateOfBirth" placeholder="dob" required/><br/><br/>
             <div class="custom-select" style="width:200px;">
  <select name="securityQuestionUser"><br/><br/>
