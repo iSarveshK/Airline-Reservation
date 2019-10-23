@@ -1,5 +1,7 @@
 package com.airline.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +10,7 @@ import com.airline.model.FlightSchedule;
 import com.airline.repository.FlightRepository;
 
 @Service
-public class FlightService {
+public class AdminSearch {
 
 	@Autowired
 	private FlightRepository flightRepository;
@@ -30,6 +32,27 @@ public class FlightService {
 			e.printStackTrace();
 		}
 	}
+	
+	 public void listFlightSchedule() {
+		try {
+			flightRepository.listFlightSchedule();
+		} catch (Exception e) { 
+			e.printStackTrace();
+		}
+
+	}
+	
+	
+	 public void getSchedule(String source, String destination,String departureDate){
+		try {
+			flightRepository.getSchedule(source,destination,departureDate);
+		} catch (Exception e) { 
+			e.printStackTrace();
+		}
+
+	}
+	
+	
 
 
 }
