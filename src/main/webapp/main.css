@@ -1,4 +1,4 @@
-@CHARSET "ISO-8859-1";
+/* The sidebar menu */
 body{
     margin: 0px;
     overflow: hidden;
@@ -10,7 +10,7 @@ body{
   margin: 0;
 }
 .img{
-  background-image:"resources/image/p2.jpg";
+  background-image:"download.jpg";
   background-color: #cccccc;
   height: 500px;
   background-position: center;
@@ -54,6 +54,19 @@ body{
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  background-color:whitesmoke;
+    }
+    
+    li {
+      float: right;
+      color: white;
+    }
+    
   .dropbtn {
       display: inline-block;
       text-align: center;
@@ -62,7 +75,7 @@ body{
     }
     
   .dropbtn:hover {
-      background-color:whitesmoke;
+      background-color:deepskyblue;
     }
     
     .dropdown {
@@ -94,9 +107,9 @@ body{
   
     .contain{
         width: 80%;
-        float: left;
+        margin: 0 auto;
         display: inline-block;
-        max-height: 700px;
+        max-width: height 1000px;
     overflow-y: auto;
 }
         
@@ -115,63 +128,4 @@ img{
 
 .logo{
   float:left;
-}
-
-/*for search flight page*/
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  margin: auto 0;
-}
-
-li {
-  float:cen;
-  float:inherit;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  float:inherit;
-
-}
-
-li a:hover {
-  background-color: #111;
-  float:inherit;
-
-}
-tr{
-  margin-top: 10px;
-  
-}
-table{
-
-  text-align: center;
-}
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-  height: 100%;
-  
-}
-
-body {
-    background-image: url("p2.jpg");
-    height: 100%;
-    background-repeat:no-repeat; 
-    background-size: cover;
-}
-
-.login-page{
-  float: right;
-  padding-right: 30px;
 }

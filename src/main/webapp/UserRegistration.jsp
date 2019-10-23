@@ -6,11 +6,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="RegisterForm.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="form.css">
 <script type="text/javascript" src="validation.js">
 </script>
 </head>
 <body>
-<div class="login-page">
+
+
+    <div> 
+        <div class="logo">
+            <a> <img src="C:\Users\Hi\Desktop\Airline\logo.png" alt="logo" ></a>
+              </div>
+        
+        <ul>
+              <li class="name">
+                <a href="UserLogin.jsp" class="dropbtn">Home</a>
+                <a href="Contact.html">Contact Us</a>
+              </li>
+            </ul>
+        </div>
+        
+<div class="container">
         <div class="form">
           <form class="login-form" action="register.airline" method="post" onsubmit="return validateRegistrationForm()" name="registrationForm">
             <input type="text" name="firstName" placeholder="First Name" required/>
