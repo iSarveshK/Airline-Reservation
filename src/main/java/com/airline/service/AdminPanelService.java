@@ -15,7 +15,7 @@ public class AdminPanelService  implements AdminPanelServiceInterface {
 
 	@Autowired
 	private AdminPanelRepoInterface adminPanelRepoInterface ;
-	
+
 	public void addFlight(FlightInfo flightInfo){
 		try {
 			adminPanelRepoInterface.addNewFlight(flightInfo);
@@ -24,7 +24,7 @@ public class AdminPanelService  implements AdminPanelServiceInterface {
 		}
 
 	}
-	
+
 	public void addFlightSchedule(FlightSchedule flightSchedule){
 		try {
 			adminPanelRepoInterface.addNewFlightSchedule(flightSchedule);
@@ -32,10 +32,23 @@ public class AdminPanelService  implements AdminPanelServiceInterface {
 			e.printStackTrace();
 		}
 	}
-	
 
+	public FlightSchedule findScheduleById(int scheduleId){
+
+		return adminPanelRepoInterface.findScheduleById(scheduleId);
 	}
-	
-	
+
+	public void findFlightInfoById(String flightNumber){
+
+		adminPanelRepoInterface.findFlightInfoById(flightNumber);
+	}
+
+
+
+
+
+}
+
+
 
 

@@ -3,12 +3,15 @@ package com.airline.controller;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.airline.dto.FlightDto;
 import com.airline.dto.ScheduleDto;
@@ -17,6 +20,7 @@ import com.airline.model.FlightSchedule;
 import com.airline.repository.AdminPanelRepoInterface;
 import com.airline.service.AdminPanelService;
 import com.airline.service.AdminPanelServiceInterface;
+import com.airline.service.AdminSearchInterface;
 
 
 @Controller
@@ -24,6 +28,7 @@ public class AdminPanelController {
 	
 		@Autowired
 		private AdminPanelServiceInterface adminPanelServiceInterface;
+		
 		
 		@RequestMapping(path = "/adminpanel.airline", method = RequestMethod.POST)
 		public String addFlight(FlightDto data, Map model){
@@ -44,6 +49,7 @@ public class AdminPanelController {
 		@RequestMapping(path = "/addschedule.airline", method = RequestMethod.POST)
 		public String addSchedule(ScheduleDto data, Map model){
 		FlightSchedule fs = new FlightSchedule();
+		
 		fs.setDepartureDate(LocalDate.parse(data.getDepartureDate()));
 		fs.setArrivalDate(LocalDate.parse(data.getArrivalDate()));
 		fs.setDepartureTime(LocalTime.parse(data.getDepartureTime()));
@@ -61,6 +67,18 @@ public class AdminPanelController {
 		return "FlightAddSchedule.jsp";
 			
 		}
+		
+		@RequestMapping(path = "/viewschedule", method = RequestMethod.GET)
+		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
+		
+		FlightSchedule scheduleList = (FlightSchedule) adminPanelServiceInterface.findScheduleById(scheduleId);
+		
+		model.put("schedule", scheduleList);
+	
 
+		return "scheduleview.jsp";
+			
+		}
+		
 
 }

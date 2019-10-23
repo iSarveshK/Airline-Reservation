@@ -17,10 +17,19 @@ public class ScheduleDto {
 	private String status;
 	private String source;
 	private String destination;
+	private int scheduleId;
+	
+	
 	
 	
 
 	
+	public int getScheduleId() {
+		return scheduleId;
+	}
+	public void setScheduleId(int scheduleId) {
+		this.scheduleId = scheduleId;
+	}
 	public String getSource() {
 		return source;
 	}

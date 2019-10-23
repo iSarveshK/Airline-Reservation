@@ -35,6 +35,21 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 		}
 	}
 	
+	@Override
+	public FlightSchedule findScheduleById(int scheduleId){
+		
+		FlightSchedule fs = entityManager.find(FlightSchedule.class, scheduleId);
+		return fs;
+	}
+	
+	@Override
+	public FlightInfo findFlightInfoById(String flightNumber){
+		
+		FlightInfo fi = entityManager.find(FlightInfo.class, flightNumber);
+	    return fi;
+	}
+	
+	
 	/*
 	 @Override
 	 public List<FlightSchedule> listFlightSchedule() {
