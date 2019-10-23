@@ -38,10 +38,10 @@ public class AdminPanelService  implements AdminPanelServiceInterface {
 		return adminPanelRepoInterface.findScheduleById(scheduleId);
 	}
 
-	public void findFlightInfoById(String flightNumber){
+	//public void findFlightInfoById(String flightNumber){
 
-		adminPanelRepoInterface.findFlightInfoById(flightNumber);
-	}
+	//	adminPanelRepoInterface.findFlightInfoById(flightNumber);
+	//}
 
 
 

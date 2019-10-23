@@ -68,12 +68,12 @@ public class AdminPanelController {
 			
 		}
 		
-		@RequestMapping(path = "/viewschedule", method = RequestMethod.GET)
+		@RequestMapping(path = "/searchSchedule.airline", method = RequestMethod.POST)
 		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
 		
-		FlightSchedule scheduleList = (FlightSchedule) adminPanelServiceInterface.findScheduleById(scheduleId);
+		FlightSchedule schedule = adminPanelServiceInterface.findScheduleById(scheduleId);
 		
-		model.put("schedule", scheduleList);
+		model.put("schedule", schedule);
 	
 
 		return "scheduleview.jsp";

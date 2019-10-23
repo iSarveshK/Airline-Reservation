@@ -30,8 +30,8 @@ public class FlightInfo {
 	private int  businessSeats;
 	
 	
-	@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL)
-	private Set<FlightSchedule> flightSchedules;
+	//@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL)
+	//private Set<FlightSchedule> flightSchedules;
 	
 	
 	//private FlightSchedule flightSchedule;

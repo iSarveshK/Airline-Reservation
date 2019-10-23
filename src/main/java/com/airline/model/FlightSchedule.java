@@ -55,9 +55,9 @@ public class FlightSchedule {
 	private CityInfo cityInfo;
 	 */
 	
-	@ManyToOne
-	@JoinColumn(name="flightNumber")
-	private FlightInfo flightInfo;
+//	@ManyToOne
+	//@JoinColumn(name="flightNumber")
+	//private FlightInfo flightInfo;
 	
 	/*
 	@OneToMany(mappedBy="flightSchedule")
