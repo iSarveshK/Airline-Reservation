@@ -7,8 +7,8 @@ import org.junit.Test;
 
 import com.airline.model.FlightInfo;
 import com.airline.model.FlightSchedule;
-import com.airline.repository.FlightRepository;
-import com.airline.service.AdminSearch;
+import com.airline.repository.AdminPanelRepository;
+import com.airline.service.AdminPanelService;
 
 public class FlightAddTest {
 	
@@ -31,7 +31,7 @@ public class FlightAddTest {
 		flightSchedule.setArrivalTime(LocalDateTime.now());
 		flightSchedule.setStatus("Cancelled");
 		 */
-		AdminSearch flightService = new AdminSearch();
+		AdminPanelService flightService = new AdminPanelService();
 		flightService.addFlight(flightInfo);
 		//flightService.addFlightSchedule(flightSchedule);
 	
@@ -46,7 +46,7 @@ public class FlightAddTest {
 		flightInfo.setBusinessSeats(50);
 		flightInfo.setEconomySeats(100);
 		
-		AdminSearch flightService = new AdminSearch();
+		AdminPanelService flightService = new AdminPanelService();
 		flightService.addFlight(flightInfo);
 	}
 

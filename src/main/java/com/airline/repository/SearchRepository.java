@@ -23,7 +23,7 @@ public class SearchRepository {
 			session.update(p);
 			logger.info("Person updated successfully, Person Details="+p);
 		}
-		 */
+		
 		public List<FlightSchedule> listFlights() {
 			String jpql= "select fs from FlightSchedule fs";
 			Query q=entityManager.createQuery(jpql);

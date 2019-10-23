@@ -14,7 +14,7 @@ import com.airline.model.FlightSchedule;
 
 
 @Repository
-public class FlightRepository implements AdminFlightRepoInterface{
+public class AdminPanelRepository implements AdminPanelRepoInterface{
 	
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -35,7 +35,7 @@ public class FlightRepository implements AdminFlightRepoInterface{
 		}
 	}
 	
-	
+	/*
 	 @Override
 	 public List<FlightSchedule> listFlightSchedule() {
 		 	String jpql= "select fs from FlightSchedule fs";
@@ -60,8 +60,8 @@ public class FlightRepository implements AdminFlightRepoInterface{
 			}
 	  
 	 }
+	*/
 	
 	
-	
-
+}
 

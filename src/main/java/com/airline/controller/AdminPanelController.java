@@ -14,15 +14,16 @@ import com.airline.dto.FlightDto;
 import com.airline.dto.ScheduleDto;
 import com.airline.model.FlightInfo;
 import com.airline.model.FlightSchedule;
-import com.airline.service.AdminSearch;
-import com.airline.service.AdminSearchInterface;
+import com.airline.repository.AdminPanelRepoInterface;
+import com.airline.service.AdminPanelService;
+import com.airline.service.AdminPanelServiceInterface;
 
 
 @Controller
 public class AdminPanelController {
 	
 		@Autowired
-		private AdminSearchInterface flightService;
+		private AdminPanelServiceInterface adminPanelServiceInterface;
 		
 		@RequestMapping(path = "/adminpanel.airline", method = RequestMethod.POST)
 		public String addFlight(FlightDto data, Map model){
@@ -33,7 +34,7 @@ public class AdminPanelController {
 		f.setBusinessSeats(data.getBusinessSeats());
 		f.setEconomySeats(data.getEconomySeats());
 		
-		flightService.addFlight(f);
+		adminPanelServiceInterface.addFlight(f);;
 
 		return "FlightAdd.jsp";
 			
@@ -55,7 +56,7 @@ public class AdminPanelController {
 		
 	
 		
-		flightService.addFlightSchedule(fs);
+		adminPanelServiceInterface.addFlightSchedule(fs);
 
 		return "FlightAddSchedule.jsp";
 			
