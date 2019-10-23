@@ -7,6 +7,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,11 +31,24 @@ public class FlightInfo {
 	private int  businessSeats;
 	
 	
-	//@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL)
-	//private Set<FlightSchedule> flightSchedules;
+	@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	private Set<FlightSchedule> flightSchedules;
+	
+
+
 	
 	
-	//private FlightSchedule flightSchedule;
+	public Set<FlightSchedule> getFlightSchedules() {
+		return flightSchedules;
+	}
+
+	public void setFlightSchedules(Set<FlightSchedule> flightSchedules) {
+		this.flightSchedules = flightSchedules;
+	}
+
+	public int getEconomySeats() {
+		return economySeats;
+	}
 
 	public int getFlightNumber() {
 		return flightNumber;

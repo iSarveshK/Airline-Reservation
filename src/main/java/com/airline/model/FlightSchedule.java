@@ -55,9 +55,9 @@ public class FlightSchedule {
 	private CityInfo cityInfo;
 	 */
 	
-//	@ManyToOne
-	//@JoinColumn(name="flightNumber")
-	//private FlightInfo flightInfo;
+	@ManyToOne
+	@JoinColumn(name="flightNumber")
+	private FlightInfo flightInfo;
 	
 	/*
 	@OneToMany(mappedBy="flightSchedule")
@@ -69,6 +69,12 @@ public class FlightSchedule {
 	
 	public int getBusinessSeatsAvailable() {
 		return businessSeatsAvailable;
+	}
+	public FlightInfo getFlightInfo() {
+		return flightInfo;
+	}
+	public void setFlightInfo(FlightInfo flightInfo) {
+		this.flightInfo = flightInfo;
 	}
 	public String getSource() {
 		return source;
