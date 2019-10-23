@@ -12,8 +12,10 @@
 </head>
 <body>
 <form method ="post" action="addschedule.airline">
-
- <sql:query dataSource = "${snapshot}" var = "result">
+<sql:setDataSource var = "myEmf" driver = "oracle.jdbc.driver.OracleDriver"
+         url = "jdbc:oracle:thin:@192.168.100.237:1521:xe"
+         user = "airline_p"  password = "abcd1234"/>
+ <sql:query dataSource = "${myEmf}" var = "result">
             SELECT FLIGHT_NUMBER from TBL_FLIGHT_INFO;
          </sql:query>
 <c:forEach var = "row" items = "${result.rows}">
