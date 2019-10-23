@@ -15,13 +15,14 @@ import com.airline.dto.ScheduleDto;
 import com.airline.model.FlightInfo;
 import com.airline.model.FlightSchedule;
 import com.airline.service.AdminSearch;
+import com.airline.service.AdminSearchInterface;
 
 
 @Controller
 public class AdminPanelController {
 	
 		@Autowired
-		private AdminSearch flightService;
+		private AdminSearchInterface flightService;
 		
 		@RequestMapping(path = "/adminpanel.airline", method = RequestMethod.POST)
 		public String addFlight(FlightDto data, Map model){
