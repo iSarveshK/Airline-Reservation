@@ -3,13 +3,13 @@ package com.airline.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-
 import javax.persistence.*;
-
 import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name="TBL_FLIGHT_SCHEDULE")
 public class FlightSchedule {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="schdule_sequence" )
 	@SequenceGenerator(name="schdule_sequence",sequenceName="flight_schedule_seq",allocationSize=1)
@@ -38,17 +38,18 @@ public class FlightSchedule {
 	
 	@Column(name = "SEATS_AVAILABLE_ECONOMY")
 	private int  economySeatsAvailable;
+	
 	@Column(name = "SEATS_AVAILABLE_BUSINESS")
 	private int  businessSeatsAvailable;
+	
 	@Column(name = "STATUS")
 	private String status;
 	
-	/*
 	@ManyToOne
-	@JoinColumn(name="routeId")
-	private RouteInfo routeInfo;
+	@JoinColumn(name="cityName")
+	private CityInfo cityInfo;
 
-	
+	/*
 	@ManyToOne
 	@JoinColumn(name="flightNumber")
 	private FlightInfo flightInfo;
