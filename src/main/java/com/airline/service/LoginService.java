@@ -1,27 +1,24 @@
-package com.lti.service;
+package com.airline.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lti.dao.Login1Daoimpl;
-import com.lti.entity.Admin;
+import com.airline.model.Admin;
+import com.airline.repository.LoginRepository;
 
 @Service
 public class LoginService {
 	
 	@Autowired
-	private Login1Daoimpl logindao;
+	private LoginRepository loginRepo;
 
 	
-	public Admin checkLogin(String email,String password){
+	public Admin checkLogin(String email,String password) throws Exception{
 		System.out.println("In service login");
 		
 		
-		return logindao.checkLogin(email,password);
+		return loginRepo.checkLogin(email,password);
 	
-		
-	}
-	
-	
-	
+
+}
 }

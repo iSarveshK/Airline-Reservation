@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login.lti" method="post">
+<form action="login.airline" method="post">
 <label>Enter login id</label>
 <input type="text" name="email"/>
 <label>Enter password</label>

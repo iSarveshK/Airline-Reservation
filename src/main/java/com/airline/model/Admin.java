@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.airline.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
