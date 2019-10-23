@@ -15,8 +15,24 @@ public class ScheduleDto {
 	private int economySeatsAvailable;
 	private int businessSeatsAvailable;
 	private String status;
+	private String source;
+	private String destination;
+	
+	
 
 	
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
 	public String getFlightNumber() {
 		return flightNumber;
 	}

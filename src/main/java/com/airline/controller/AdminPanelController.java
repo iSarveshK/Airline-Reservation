@@ -44,8 +44,7 @@ public class AdminPanelController {
 		@RequestMapping(path = "/addschedule.airline", method = RequestMethod.POST)
 		public String addSchedule(ScheduleDto data, Map model){
 		FlightSchedule fs = new FlightSchedule();
-		//f.setFlightNumber(data.getFlightNumber());
-		
+		fs.setFlightNumber(data.getFlightNumber());
 		fs.setDepartureDate(LocalDate.parse(data.getDepartureDate()));
 		fs.setArrivalDate(LocalDate.parse(data.getArrivalDate()));
 		fs.setDepartureTime(LocalTime.parse(data.getDepartureTime()));
@@ -53,6 +52,8 @@ public class AdminPanelController {
 		fs.setBusinessSeatsAvailable(data.getBusinessSeatsAvailable());
 		fs.setEconomySeatsAvailable(data.getEconomySeatsAvailable());
 		fs.setStatus(data.getStatus());
+		fs.setSource(data.getSource());
+		fs.setDestination(data.getDestination());
 		
 	
 		

@@ -14,7 +14,7 @@ Enter Flight number: <input name="flightNumber"/><br/>
 Enter source: <input name="source"/><br/>
 Enter destination: <input name="destination"/><br/>		-->
  
-<select name="flightName">
+<select name="flightNumber">
 <option>F001</option>
 <option>F002</option>
 </select>
@@ -25,6 +25,8 @@ Add Arrival Time: <input type="time" name="arrivalTime"/><br/>
 Enter business seats: <input type ="text" name="economySeatsAvailable"/><br/>
 Enter economy seats: <input type="text" name="businessSeatsAvailable"/><br/>
 Status: <input name="status"/><br/>
+Source: <input name="source"/><br/>
+Destination: <input name="destination"/><br/>
 <button type="submit">Submit</button>
 </form>
 </body>

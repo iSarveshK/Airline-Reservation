@@ -19,6 +19,12 @@ public class FlightSchedule {
 	@Column(name = "FLIGHT_NUMBER")
 	private String flightNumber;
 	
+	@Column(name = "SOURCE")
+	private String source;
+	
+	@Column(name="DESTINATION")
+	private String destination;
+	
 	@Column(name = "DEPARTURE_DATE")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate departureDate;
@@ -44,6 +50,7 @@ public class FlightSchedule {
 	
 	@Column(name = "STATUS")
 	private String status;
+	
 	/*
 	@ManyToOne
 	@JoinColumn(name="cityName")
@@ -58,9 +65,23 @@ public class FlightSchedule {
 	//private BookingInfo bookingInfo;
 		*/
 	
-
+	
+	
+	
 	public int getBusinessSeatsAvailable() {
 		return businessSeatsAvailable;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
 	public String getFlightNumber() {
 		return flightNumber;
