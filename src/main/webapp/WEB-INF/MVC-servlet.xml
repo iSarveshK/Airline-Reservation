@@ -10,7 +10,7 @@
         https://www.springframework.org/schema/tx/spring-tx.xsd" >
 
 	<!-- Loading annotated classes/beans -->
-	<context:component-scan base-package="com.airline.*"/>
+	<context:component-scan base-package="com.airline.service , com.airline.repository , com.airline.controller"/>
 	
         
         <!-- Loading  annotated classes/beans -->
@@ -47,6 +47,29 @@
 		<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     			<property name="entityManagerFactory" ref="myEmf" />
 		</bean>
+		
+		<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.office365.com"/>
+        <property name="port" value="587" />
+        <property name="username" value="lisa.anthony@lntinfotech.com"/>
+        <property name="password" value=""/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+                <prop key="mail.smtp.connecttimeout">50000</prop>
+                <prop key="mail.smtp.timeout">30000</prop>
+                <prop key="mail.smtp.writetimeout">50000</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- simple mail -->
+    <bean id="preConfiguredMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="from" value="lisa.anthony@lntinfotech.com"></property>
+    </bean> 
+   
 		
 	
 				

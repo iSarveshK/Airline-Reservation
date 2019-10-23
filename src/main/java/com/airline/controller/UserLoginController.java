@@ -9,19 +9,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.airline.model.Admin;
-import com.airline.service.LoginService;
+import com.airline.model.User;
+import com.airline.service.AdminLoginService;
+import com.airline.service.UserLoginService;
 
 @Controller
-public class LoginController {
+public class UserLoginController {
 	
-
 	@Autowired
-	private LoginService loginService;
+	private UserLoginService userloginService;
 	
-	@RequestMapping(path = "/login.airline", method = RequestMethod.POST)
+	@RequestMapping(path = "/user-login.airline", method = RequestMethod.POST)
 	public String checkLogin(@RequestParam("email") String email, @RequestParam("password") String password,Map model) throws Exception{
 		try {
-		Admin check=loginService.checkLogin(email, password);
+		User check=userloginService.checkLogin(email, password);
 		if(check != null){
 			model.put("message", "login successful");
 			return "welcome.jsp";
@@ -37,6 +38,5 @@ public class LoginController {
 		}
 		
 	}
+
 }
-
-
