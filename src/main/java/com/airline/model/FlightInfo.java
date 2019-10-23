@@ -20,8 +20,6 @@ import javax.persistence.Table;
 public class FlightInfo {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="s1" )
-	@SequenceGenerator(name="s1",sequenceName="flight_seq",allocationSize=1)
 	@Column(name = "FLIGHT_NUMBER")
 	private int flightNumber;
 	@Column(name = "FLIGHT_NAME")
@@ -32,8 +30,9 @@ public class FlightInfo {
 	private int  businessSeats;
 	
 	
-	//@OneToMany(mappedBy="flightNumber",cascade=CascadeType.ALL)
-	//private Set<FlightSchedule> flightSchedules;
+	@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL)
+	private Set<FlightSchedule> flightSchedules;
+	
 	
 	//private FlightSchedule flightSchedule;
 

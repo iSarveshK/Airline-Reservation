@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,15 +13,14 @@
 <body>
 <form method ="post" action="addschedule.airline">
 
-<!-- 
-Enter Flight number: <input name="flightNumber"/><br/>
-Enter source: <input name="source"/><br/>
-Enter destination: <input name="destination"/><br/>		-->
- 
+ <sql:query dataSource = "${snapshot}" var = "result">
+            SELECT FLIGHT_NUMBER from TBL_FLIGHT_INFO;
+         </sql:query>
+<c:forEach var = "row" items = "${result.rows}">
 <select name="flightNumber">
-<option>F001</option>
-<option>F002</option>
+  <option><c:out value = "${row.flightNumber}"/></option>
 </select>
+</c:forEach>
 Add Departure Date: <input type="date" name="departureDate"/><br/>
 Add Arrival Date: <input type="date" name="arrivalDate"/><br/>
 Add Departure Time: <input type="time" name="departureTime"/><br/>

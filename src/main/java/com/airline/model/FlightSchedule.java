@@ -16,8 +16,6 @@ public class FlightSchedule {
 	@Column(name = "SCHEDULE_ID")
 	private int scheduleId;
 	
-	@Column(name = "FLIGHT_NUMBER")
-	private String flightNumber;
 	
 	@Column(name = "SOURCE")
 	private String source;
@@ -56,11 +54,12 @@ public class FlightSchedule {
 	@JoinColumn(name="cityName")
 	private CityInfo cityInfo;
 	 */
-	/*
+	
 	@ManyToOne
 	@JoinColumn(name="flightNumber")
 	private FlightInfo flightInfo;
 	
+	/*
 	@OneToMany(mappedBy="flightSchedule")
 	//private BookingInfo bookingInfo;
 		*/
@@ -83,12 +82,7 @@ public class FlightSchedule {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public String getFlightNumber() {
-		return flightNumber;
-	}
-	public void setFlightNumber(String flightNumber) {
-		this.flightNumber = flightNumber;
-	}
+
 	public void setBusinessSeatsAvailable(int businessSeatsAvailable) {
 		this.businessSeatsAvailable = businessSeatsAvailable;
 	}

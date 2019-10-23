@@ -2,12 +2,18 @@ package com.airline.dto;
 
 public class FlightDto {
 	
-
+	private int flightNumber;
 	private String flightName;
 	private int businessSeats;
 	private int economySeats;
 	
-
+	
+	public int getFlightNumber() {
+		return flightNumber;
+	}
+	public void setFlightNumber(int flightNumber) {
+		this.flightNumber = flightNumber;
+	}
 	public String getFlightName() {
 		return flightName;
 	}
