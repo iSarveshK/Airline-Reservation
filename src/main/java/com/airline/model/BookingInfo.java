@@ -9,7 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 //@Entity
+@Entity
+@Table(name="Tbl_Booking_Info")
 public class BookingInfo {
 	
 	private int bookingId;
