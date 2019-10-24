@@ -1,5 +1,6 @@
 package com.airline.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -50,9 +51,11 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 	}
 	
 	public List<FlightInfo> listFlightNumber(){
-		String jpql= "select fi.flightNumber from FlightInfo fi";
+		String jpql= "select fi from FlightInfo fi";
 		Query q=entityManager.createQuery(jpql);
 		return q.getResultList();
+		
+		
 	}
 	
 	/*

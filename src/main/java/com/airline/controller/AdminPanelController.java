@@ -1,5 +1,6 @@
 package com.airline.controller;
 
+import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.airline.dto.FlightDto;
 import com.airline.dto.ScheduleDto;
@@ -24,6 +26,7 @@ import com.airline.service.AdminSearchInterface;
 
 
 @Controller
+@SessionAttributes({"schedule", "flightNumbers"})
 public class AdminPanelController {
 	
 		@Autowired
@@ -39,8 +42,8 @@ public class AdminPanelController {
 		f.setBusinessSeats(data.getBusinessSeats());
 		f.setEconomySeats(data.getEconomySeats());
 		
-		adminPanelServiceInterface.addFlight(f);;
-		adminPanelServiceInterface.listFlightNumber();
+		adminPanelServiceInterface.addFlight(f);
+		//adminPanelServiceInterface.listFlightNumber();
 		
 		
 		return "AddSchedule.jsp";
@@ -77,11 +80,18 @@ public class AdminPanelController {
 		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
 	
 		FlightSchedule schedule = adminPanelServiceInterface.findScheduleById(scheduleId);
-		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(schedule.getFlightInfo().getFlightNumber());
+//		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(schedule.getFlightInfo().getFlightNumber());
+		List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightNumber();
+		
+		for (FlightInfo f: flightNumberList) {
+			System.out.println(f.getFlightName());
+		}
+		
 		model.put("schedule", schedule);
-		model.put("flightInfo", fi);
+//		model.put("flightInfo", fi);
+		model.put("flightnumbers", flightNumberList);
 	
-
+		
 		return "scheduleview.jsp";
 			
 		}
