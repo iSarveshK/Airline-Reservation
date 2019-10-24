@@ -72,11 +72,12 @@ public class AdminPanelController {
 		}
 		
 		@RequestMapping(path = "/searchSchedule.airline", method = RequestMethod.POST)
-		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
-		
+		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model ,FlightDto data){
+	
 		FlightSchedule schedule = adminPanelServiceInterface.findScheduleById(scheduleId);
-		
+		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(data.getFlightNumber());
 		model.put("schedule", schedule);
+		model.put("flightInfo", fi);
 	
 
 		return "scheduleview.jsp";

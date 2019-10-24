@@ -10,6 +10,9 @@
 <td>
 ${ schedule.source }
 ${ schedule.destination }
-${ schedule.flightNumber }
+${ schedule.flightInfo.flightNumber }
+
+
+
 </body>
 </html>
