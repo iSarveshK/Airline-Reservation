@@ -41,16 +41,16 @@ public class UserRegisterController {
 		userRegisterService.register(user1);
 		
 		model.addAttribute("user", user1);
-		return "redirect:/showDashBoard.airline"; 
+		return "redirect:/confirmation.jsp"; 
 		
 	
 		}
-		@RequestMapping("/showDashBoard.airline")
-		public String showDashBoard(ModelMap model){
+		@RequestMapping("/User-login.airline")
+		public String showLogin(ModelMap model){
 			if(model.containsAttribute("user")){
 				return "welcome.jsp";
 			}
-		return "redirect:/loginUser.airline";
+		return "redirect:/UserLogin.airline";
 	}	
 	
 		

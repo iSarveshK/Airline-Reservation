@@ -26,9 +26,9 @@ function hideFunction() {
                 
                 <ul>
                       <li class="name">
-                        <a href="" class="dropbtn">Hi Name</a>
+                        <a href="" class="dropbtn">Hi ${username}</a>
                         <div class="dropdown-content">
-                          <a href="user_login.html">Logout</a>
+                          <a href="UserLogin.jsp">Logout</a>
                         </div>
                       </li>
                     </ul>

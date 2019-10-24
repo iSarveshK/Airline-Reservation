@@ -45,6 +45,12 @@ public class UserLoginController {
 		}
 	}
 	
+	@RequestMapping(path="/user-logout.airline",method=RequestMethod.POST)
+	public String logout(ModelMap model,HttpSession session){
+		model.clear();
+		session.invalidate();
+		return "redirect:/login.jsp";
+	}
 		
 	}
 
