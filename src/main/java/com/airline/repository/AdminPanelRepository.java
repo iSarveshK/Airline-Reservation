@@ -42,33 +42,47 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 		
 	}
 	
-	/*@Override
-	public FlightInfo findFlightInfoById(String flightNumber){
+	@Override
+	public FlightInfo findFlightInfoById(int flightNumber) {
 		
 		FlightInfo fi = entityManager.find(FlightInfo.class, flightNumber);
 	    return fi;
 	}
 	
-	*/
 	/*
+	
+	
+	
 	 @Override
+	 public List<FlightInfo> listFlightInfo() {
+		 	String jpql= "select fi from FlightInfo fi";
+			Query q=entityManager.createQuery(jpql);
+			return q.getResultList();
+		 
+	 }
+	 
+	 
+	  @Override
 	 public List<FlightSchedule> listFlightSchedule() {
 		 	String jpql= "select fs from FlightSchedule fs";
 			Query q=entityManager.createQuery(jpql);
 			return q.getResultList();
-		 
 	 }
 	 
-	 
 	 @Override
-	 public List<FlightSchedule> getSchedule(String source, String destination,String departureDate){
+	 public List<FlightSchedule> SearchFlightSchedule(String source, String destination,String departureDate){
 		 
 			String jpql= "select fs from FlightSchedule fs where source:=src and destination:=dest and departureDate=:departDate";
 			Query q=entityManager.createQuery(jpql);
+			q.setParameter("src", source);
+			q.setParameter("dest", destination);
+			q.setParameter("departDate", departureDate);
 			return q.getResultList();
 	  
 	 }
 	 
+	 /*
+	 /*
 	 @Override
 	 public void deleteSchedule(int scheduleId) {
 				entityManager.remove(scheduleId);

@@ -14,14 +14,14 @@
 <body>
 <form method ="post" action="addschedule.airline">
 <select name="flightNumber">
-  <option><c:out value = ""/></option>
+  <option value="1001">1001</option>
+  <option value="1002">1002</option>
 </select>
 
-Schedule Id: <input type ="text" name="scheduleId"/><br/>
 Add Departure Date: <input type="date" name="departureDate"/><br/>
 Add Arrival Date: <input type="date" name="arrivalDate"/><br/>
-Add Departure Time: <input type="time" name="departureTime"/><br/>
-Add Arrival Time: <input type="time" name="arrivalTime"/><br/> 
+Add Departure Time: <input type="text" name="departureTime"/><br/>
+Add Arrival Time: <input type="text" name="arrivalTime"/><br/> 
 Enter business seats: <input type ="text" name="economySeatsAvailable"/><br/>
 Enter economy seats: <input type="text" name="businessSeatsAvailable"/><br/>
 Status: <input name="status"/><br/>
