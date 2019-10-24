@@ -23,6 +23,7 @@ public class FlightInfo {
 	@Id
 	@Column(name = "FLIGHT_NUMBER")
 	private int flightNumber;
+	
 	@Column(name = "FLIGHT_NAME")
 	private String flightName;
 	@Column(name = "TOTAL_SEAT_ECO")
@@ -31,10 +32,10 @@ public class FlightInfo {
 	private int  businessSeats;
 	
 	
-	@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="flightInfo",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Set<FlightSchedule> flightSchedules;
 	
-
+	
 
 	
 	

@@ -24,21 +24,19 @@ public class FlightSchedule {
 	private String destination;
 	
 	@Column(name = "DEPARTURE_DATE")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private LocalDate departureDate;
 	
 	@Column(name = "ARRIVAL_DATE")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private LocalDate arrivalDate;
 	
 	
 	@Column(name = "DEPARTURE_TIME")
-	@DateTimeFormat(pattern = "hh:mm:ss")
-	private LocalTime departureTime;
+	private String departureTime;
 	
 	@Column(name = "ARRIVAL_TIME")
-	@DateTimeFormat(pattern = "hh:mm:ss")
-	private LocalTime arrivalTime;
+	private String arrivalTime;
 	
 	@Column(name = "SEATS_AVAILABLE_ECONOMY")
 	private int  economySeatsAvailable;
@@ -55,8 +53,10 @@ public class FlightSchedule {
 	private CityInfo cityInfo;
 	 */
 	
-	@ManyToOne
-	@JoinColumn(name="flightNumber")
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="FLIGHT_NUMBER")
+	
+	
 	private FlightInfo flightInfo;
 	
 	/*
@@ -122,16 +122,17 @@ public class FlightSchedule {
 	}
 
 
-	public LocalTime getDepartureTime() {
+
+	public String getDepartureTime() {
 		return departureTime;
 	}
-	public void setDepartureTime(LocalTime departureTime) {
+	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
-	public LocalTime getArrivalTime() {
+	public String getArrivalTime() {
 		return arrivalTime;
 	}
-	public void setArrivalTime(LocalTime arrivalTime) {
+	public void setArrivalTime(String arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
 	public String getStatus() {

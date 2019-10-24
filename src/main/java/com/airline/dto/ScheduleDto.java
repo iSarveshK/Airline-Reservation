@@ -7,7 +7,7 @@ import javax.persistence.Column;
 
 public class ScheduleDto {
 	
-	private String flightNumber;
+	private int flightNumber;
 	private String departureDate;
 	private String arrivalDate;
 	private String departureTime;
@@ -22,7 +22,7 @@ public class ScheduleDto {
 	
 	
 	
-
+	
 	
 	public int getScheduleId() {
 		return scheduleId;
@@ -42,10 +42,10 @@ public class ScheduleDto {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public String getFlightNumber() {
+	public int getFlightNumber() {
 		return flightNumber;
 	}
-	public void setFlightNumber(String flightNumber) {
+	public void setFlightNumber(int flightNumber) {
 		this.flightNumber = flightNumber;
 	}
 	public String getDepartureDate() {

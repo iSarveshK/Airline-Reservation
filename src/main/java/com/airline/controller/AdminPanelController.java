@@ -49,11 +49,14 @@ public class AdminPanelController {
 		@RequestMapping(path = "/addschedule.airline", method = RequestMethod.POST)
 		public String addSchedule(ScheduleDto data, Map model){
 		FlightSchedule fs = new FlightSchedule();
+		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(data.getFlightNumber());
+	
 		
+		fs.setFlightInfo(fi);
 		fs.setDepartureDate(LocalDate.parse(data.getDepartureDate()));
 		fs.setArrivalDate(LocalDate.parse(data.getArrivalDate()));
-		fs.setDepartureTime(LocalTime.parse(data.getDepartureTime()));
-		fs.setArrivalTime(LocalTime.parse(data.getArrivalTime()));
+		fs.setDepartureTime(data.getDepartureTime());
+		fs.setArrivalTime(data.getArrivalTime());
 		fs.setBusinessSeatsAvailable(data.getBusinessSeatsAvailable());
 		fs.setEconomySeatsAvailable(data.getEconomySeatsAvailable());
 		fs.setStatus(data.getStatus());
@@ -79,6 +82,9 @@ public class AdminPanelController {
 		return "scheduleview.jsp";
 			
 		}
+		
+		
+		
 		
 
 }
