@@ -53,7 +53,7 @@ public class AdminPanelController {
 		
 		@RequestMapping(path = "/showAddSchedule.airline", method = RequestMethod.GET)
 		public String showAddSchedule(ModelMap model) {
-			List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightNumber();
+			List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightInfo();
 			model.put("flightnumbers", flightNumberList);
 			return "AddSchedule.jsp";
 		}
@@ -88,22 +88,38 @@ public class AdminPanelController {
 		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
 	
 		FlightSchedule schedule = adminPanelServiceInterface.findScheduleById(scheduleId);
-//		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(schedule.getFlightInfo().getFlightNumber());
-		List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightNumber();
-		
-	
+		List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightInfo();
 		
 		model.put("schedule", schedule);
-//	
+
 		model.put("flightnumbers", flightNumberList);
 	
-		
 		return "scheduleview.jsp";
 			
 		}
 		
+		@RequestMapping(path = "/viewflightInfo.airline", method = RequestMethod.GET)
+		public String viewFlightInfo(Map model){
+	
+	
+		List<FlightInfo> flightInfoObj =  adminPanelServiceInterface.listFlightInfo();
 		
+
+		model.put("flightInformation", flightInfoObj);
+	
+		return "viewFlightInfo.jsp";
+			
+		}
 		
+		@RequestMapping(path = "/viewflightSchedule.airline", method = RequestMethod.GET)
+		public String viewFlightSchedule(Map model){
+		List<FlightSchedule> flightScheduleObj =  adminPanelServiceInterface.listFlightSchedule();
+		
+		model.put("flightScheduleInformation", flightScheduleObj);
+	
+		return "viewFlightSchedule.jsp";
+			
+		}
 		
 
 }

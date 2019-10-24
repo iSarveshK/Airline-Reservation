@@ -50,7 +50,7 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 	    return fi;
 	}
 	
-	public List<FlightInfo> listFlightNumber(){
+	public List<FlightInfo> listFlightInfo(){
 		String jpql= "select fi from FlightInfo fi";
 		Query q=entityManager.createQuery(jpql);
 		return q.getResultList();
@@ -58,6 +58,11 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 		
 	}
 	
+	public List<FlightSchedule> listFlightSchedule(){
+		String jpql= "select fs from FlightSchedule fs";
+		Query q=entityManager.createQuery(jpql);
+		return q.getResultList();
+	}
 	/*
 	
 	

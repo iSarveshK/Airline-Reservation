@@ -48,8 +48,13 @@ public class AdminPanelService  implements AdminPanelServiceInterface {
 	}
 	
 	@Override
-	public List<FlightInfo> listFlightNumber(){
-		return adminPanelRepoInterface.listFlightNumber();
+	public List<FlightInfo> listFlightInfo(){
+		return adminPanelRepoInterface.listFlightInfo();
+	}
+	
+	@Override
+	public List<FlightSchedule> listFlightSchedule(){
+		return adminPanelRepoInterface.listFlightSchedule();
 	}
 	
 	/*
