@@ -17,6 +17,7 @@ public class UserService {
 		public void register(User user){
 			registerationRepository.addNewUser(user);	
 			mailService.send(user); //sends mail (business logic)
+			
 		}
 	}
 

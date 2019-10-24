@@ -7,7 +7,7 @@ import com.airline.model.Admin;
 import com.airline.repository.AdminLoginRepository;
 
 @Service
-public class AdminLoginService {
+public class AdminLoginService implements AdminLoginServiceInterface{
 	
 	@Autowired
 	private AdminLoginRepository adminloginRepo;
