@@ -11,6 +11,6 @@ public interface AdminPanelServiceInterface {
 	public void addFlightSchedule(FlightSchedule flightSchedule);
 	public FlightSchedule findScheduleById(int scheduleId );
 	public FlightInfo findFlightInfoById(int flightNumber);
-	//public List<FlightInfo> listFlightInfo();
+	public List<FlightInfo> listFlightNumber();
 	//public List<FlightSchedule> listFlightSchedule();
 }

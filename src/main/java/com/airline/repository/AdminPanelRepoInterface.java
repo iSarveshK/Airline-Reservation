@@ -13,7 +13,7 @@ public interface AdminPanelRepoInterface {
 	public FlightSchedule findScheduleById(int scheduleId);
 	public FlightInfo findFlightInfoById(int flightNumber);
 	
-	//public List<FlightInfo> listFlightInfo();
+	public List<FlightInfo> listFlightNumber();
 	//public List<FlightSchedule> listFlightSchedule();
 	//public List<FlightSchedule> SearchFlightSchedule(String source, String destination,String departureDate);
 	

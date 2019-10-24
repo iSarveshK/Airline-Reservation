@@ -40,8 +40,8 @@ public class AdminPanelController {
 		f.setEconomySeats(data.getEconomySeats());
 		
 		adminPanelServiceInterface.addFlight(f);;
-
-		return "FlightAdd.jsp";
+		
+		return "AddSchedule.jsp";
 			
 		}
 		
@@ -72,10 +72,10 @@ public class AdminPanelController {
 		}
 		
 		@RequestMapping(path = "/searchSchedule.airline", method = RequestMethod.POST)
-		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model ,FlightDto data){
+		public String viewSchedule(@RequestParam("scheduleId") int scheduleId , Map model){
 	
 		FlightSchedule schedule = adminPanelServiceInterface.findScheduleById(scheduleId);
-		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(data.getFlightNumber());
+		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(schedule.getFlightInfo().getFlightNumber());
 		model.put("schedule", schedule);
 		model.put("flightInfo", fi);
 	

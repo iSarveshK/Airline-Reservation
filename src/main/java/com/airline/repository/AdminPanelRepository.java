@@ -49,6 +49,12 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 	    return fi;
 	}
 	
+	public List<FlightInfo> listFlightNumber(){
+		String jpql= "select fi.flightNumber from FlightInfo fi";
+		Query q=entityManager.createQuery(jpql);
+		return q.getResultList();
+	}
+	
 	/*
 	
 	
