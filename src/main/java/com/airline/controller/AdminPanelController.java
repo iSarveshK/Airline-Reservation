@@ -40,6 +40,8 @@ public class AdminPanelController {
 		f.setEconomySeats(data.getEconomySeats());
 		
 		adminPanelServiceInterface.addFlight(f);;
+		adminPanelServiceInterface.listFlightNumber();
+		
 		
 		return "AddSchedule.jsp";
 			
