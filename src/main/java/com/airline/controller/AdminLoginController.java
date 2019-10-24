@@ -24,7 +24,7 @@ public class AdminLoginController {
 	@Autowired
 	private AdminLoginService adminloginService;
 	
-	@RequestMapping(path = "/login.airline", method = RequestMethod.POST)
+	@RequestMapping(path = "/admin-login-panel.airline", method = RequestMethod.POST)
 	public String checkLogin(@RequestParam("email") String email, @RequestParam("password") String password,ModelMap model) throws Exception{
 		try {
 		Admin check=adminloginService.checkLogin(email, password);
