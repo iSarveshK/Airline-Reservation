@@ -29,9 +29,9 @@
     
     <div class="container">
         <div class="form">
-          <form class="login-form" action="login.airline" method="POST">
-            <input type="text" placeholder="Admin ID" required/>
-            <input type="password" placeholder="Password" required/>
+          <form class="login-form" action="admin-login-panel.airline" method="POST">
+            <input type="email" name="email" placeholder="Admin ID" required/>
+            <input type="password" name="password" placeholder="Password" required/>
             <p class="message"><a href="admin_forgot.html">Forgot Password? </a></p> <br>
             <button type="submit" >Login</button>
           </form>

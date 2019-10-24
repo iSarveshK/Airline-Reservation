@@ -48,10 +48,10 @@ body {
     <div class="container" >
         <div class="form"> 
           <form class="login-form" action="user-login.airline" method="POST">
-            <input type="text" placeholder="User ID" required/>
-            <input type="password" placeholder="Password" required/>
+            <input type="email" name="email"placeholder="User ID" required/>
+            <input type="password" name="password" placeholder="Password" required/>
             <p class="message"><a href="#">Forgot Password? </a></p> <br>
-            <button type="submit" formaction="UserSearchFlight.jsp">Login</button>
+            <button type="submit" >Login</button>
             <p class="message">Not registered? <a href="UserRegistration.jsp">Create an account</a></p>
             <p class="message">Are You Admin? <a href="admin_login.jsp">Click here to login as admin</a></p>
           </form>

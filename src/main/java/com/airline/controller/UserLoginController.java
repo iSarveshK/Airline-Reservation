@@ -32,12 +32,12 @@ public class UserLoginController {
 		if(check != null){
 		
 			modelMap.addAttribute("userLogin",check);
-			return "redirect:/welcome.jsp";
+			return "redirect:/UserSearchFlight.jsp";
 		}
 	
 		else{
 			modelMap.put("message", "login unsuccessful!");
-			return "login.jsp";
+			return "UserLogin.jsp";
 		}
 		} catch (Exception e) {
 			modelMap.put("error", e.getMessage());
