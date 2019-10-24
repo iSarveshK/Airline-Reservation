@@ -14,8 +14,12 @@
 <body>
 <form method ="post" action="addschedule.airline">
 <select name="flightNumber">
-  <option value="1001">1001</option>
-  <option value="1002">1002</option>
+  <c:forEach items="${ flightnumbers }" var="flight">
+
+<option value =	${ flight.flightNumber } > ${ flight.flightNumber } </option>
+
+
+</c:forEach>
 </select>
 
 Add Departure Date: <input type="date" name="departureDate"/><br/>

@@ -18,8 +18,14 @@ ${ schedule.source }
 ${ schedule.destination }
 
 
+<select>
+
 <c:forEach items="${ flightnumbers }" var="flightNumber">
-	${ flightNumber.flightNumber }
+
+<option value =	${ flightNumber.flightNumber } > ${ flightNumber.flightNumber } </option>
+
+
 </c:forEach>
+</select>
 </body>
 </html>

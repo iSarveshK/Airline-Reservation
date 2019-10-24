@@ -10,6 +10,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,8 +47,15 @@ public class AdminPanelController {
 		//adminPanelServiceInterface.listFlightNumber();
 		
 		
-		return "AddSchedule.jsp";
+		return "redirect:/showAddSchedule.airline";
 			
+		}
+		
+		@RequestMapping(path = "/showAddSchedule.airline", method = RequestMethod.GET)
+		public String showAddSchedule(ModelMap model) {
+			List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightNumber();
+			model.put("flightnumbers", flightNumberList);
+			return "AddSchedule.jsp";
 		}
 		
 		
@@ -83,12 +91,10 @@ public class AdminPanelController {
 //		FlightInfo fi = (FlightInfo) adminPanelServiceInterface.findFlightInfoById(schedule.getFlightInfo().getFlightNumber());
 		List<FlightInfo> flightNumberList =  adminPanelServiceInterface.listFlightNumber();
 		
-		for (FlightInfo f: flightNumberList) {
-			System.out.println(f.getFlightName());
-		}
+	
 		
 		model.put("schedule", schedule);
-//		model.put("flightInfo", fi);
+//	
 		model.put("flightnumbers", flightNumberList);
 	
 		
