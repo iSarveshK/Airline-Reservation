@@ -3,6 +3,8 @@ package com.airline.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
+
 import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 

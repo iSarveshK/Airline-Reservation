@@ -1,6 +1,7 @@
 package com.airline.dto;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -8,7 +9,7 @@ public class UserFlightSearchDto {
 	
 	private String source;
 	private String destination;
-	private String departureDate;
+	private Date departureDate;
 	
 	public String getSource() {
 		return source;
@@ -22,10 +23,10 @@ public class UserFlightSearchDto {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public String getDepartureDate() {
+	public Date getDepartureDate() {
 		return departureDate;
 	}
-	public void setDepartureDate(String departureDate) {
+	public void setDepartureDate(Date departureDate) {
 		this.departureDate = departureDate;
 	}
 	
