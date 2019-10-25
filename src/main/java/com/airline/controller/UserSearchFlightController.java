@@ -28,7 +28,7 @@ public class UserSearchFlightController {
 	//,LocalDate.parse(data.getDepartureDate())
 	model.put("searchFlightResults", searchFlightResultsList);
 
-	return "UserSearchResults.jsp";
+	return "UserFlightSearchResults.jsp";
 		
 	}
 	

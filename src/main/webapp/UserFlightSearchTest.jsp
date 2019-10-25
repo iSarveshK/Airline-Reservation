@@ -14,6 +14,6 @@ destination: <input type ="text" name="destination"/><br/>
 <!-- departure dates: <input type ="date" name="departureDate"/><br/> -->
 
 <button type="submit">Submit</button>
-
+</form>
 </body>
 </html>
