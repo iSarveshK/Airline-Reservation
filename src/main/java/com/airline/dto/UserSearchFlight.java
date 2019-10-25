@@ -1,15 +1,13 @@
 package com.airline.dto;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class UserSearchFlight {
 	
 	private String source;
 	private String destination;
-	private LocalDate departureTime;
-	private LocalDate arrivalTime;
-	private String trip;
-	
+	private Date departureTime;
+
 	public String getSource() {
 		return source;
 	}
@@ -22,24 +20,13 @@ public class UserSearchFlight {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public LocalDate getDepartureTime() {
+	public Date getDepartureTime() {
 		return departureTime;
 	}
-	public void setDepartureTime(LocalDate departureTime) {
+	public void setDepartureTime(Date departureTime) {
 		this.departureTime = departureTime;
 	}
-	public LocalDate getArrivalTime() {
-		return arrivalTime;
-	}
-	public void setArrivalTime(LocalDate arrivalTime) {
-		this.arrivalTime = arrivalTime;
-	}
-	public String getTrip() {
-		return trip;
-	}
-	public void setTrip(String trip) {
-		this.trip = trip;
-	}
+	
 	
 	
 	

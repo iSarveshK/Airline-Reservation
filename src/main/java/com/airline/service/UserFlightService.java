@@ -19,17 +19,10 @@ public class UserFlightService implements UserFlightServiceInterface {
 	@Autowired
 	private UserFlightRepoInterface userFlightRepoInterface;
 	
-	public List<FlightSchedule> SearchFlightSchedule(String source, String destination,String departureDate)
+	public List<FlightSchedule> SearchFlightSchedule(String source, String destination,Date departureDate)
 	{
-		SimpleDateFormat format = new SimpleDateFormat("yy-MM-dd");
-
-		String dateString = format.format(new Date());
-		try {
-			Date date = format.parse(departureDate);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}  
-		return userFlightRepoInterface.SearchFlightSchedule(source, destination, dateString);
+		
+		return userFlightRepoInterface.SearchFlightSchedule(source, destination, departureDate);
 	}
 
 }
