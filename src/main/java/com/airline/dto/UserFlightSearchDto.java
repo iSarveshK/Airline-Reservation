@@ -9,7 +9,7 @@ public class UserFlightSearchDto {
 	
 	private String source;
 	private String destination;
-	private Date departureDate;
+	private String departureDate;
 	
 	public String getSource() {
 		return source;
@@ -23,10 +23,10 @@ public class UserFlightSearchDto {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public Date getDepartureDate() {
+	public String getDepartureDate() {
 		return departureDate;
 	}
-	public void setDepartureDate(Date departureDate) {
+	public void setDepartureDate(String departureDate) {
 		this.departureDate = departureDate;
 	}
 	

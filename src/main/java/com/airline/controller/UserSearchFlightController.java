@@ -1,6 +1,7 @@
 package com.airline.controller;
 
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ public class UserSearchFlightController {
 	
 	@RequestMapping(path = "/UserSearchFlight.airline", method = RequestMethod.GET)
 	public String flightSearchResults(UserFlightSearchDto data,Map model){
-	List <FlightSchedule> searchFlightResultsList =  userFlightServiceInterface.SearchFlightSchedule(data.getSource(),data.getDestination(),data.getDepartureDate());
+	List <FlightSchedule> searchFlightResultsList =  userFlightServiceInterface.SearchFlightSchedule(data.getSource(),data.getDestination(),LocalDate.parse(data.getDepartureDate()));
 	model.put("searchFlightResults", searchFlightResultsList);
 
 	return "UserSearchResults.jsp";

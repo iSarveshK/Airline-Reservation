@@ -8,6 +8,6 @@ import com.airline.model.FlightSchedule;
 
 public interface UserFlightServiceInterface {
 	
-	public List<FlightSchedule> SearchFlightSchedule(String source, String destination,Date departureDate);
+	public List<FlightSchedule> SearchFlightSchedule(String source, String destination,LocalDate departureDate);
 
 }
