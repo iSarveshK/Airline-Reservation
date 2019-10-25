@@ -19,13 +19,15 @@ public class UserFlightRepository implements UserFlightRepoInterface {
 	private EntityManager entityManager;
 	
 	 @Override
-	 public List<FlightSchedule> SearchFlightSchedule(String source, String destination,LocalDate departureDate){
-		 
-			String jpql= "select fs from FlightSchedule fs where fs.source=:src and fs.destination=:dest and fs.departureDate=:departDate";
+	 public List<FlightSchedule> SearchFlightSchedule(String source, String destination){
+		 //,LocalDate departureDate
+			String jpql= "select fs from FlightSchedule fs where fs.source like :src and fs.destination like :dest";
+			
+			//and fs.departureDate=:departDate
 			Query q=entityManager.createQuery(jpql);
 			q.setParameter("src", source);
 			q.setParameter("dest", destination);
-			q.setParameter("departDate", departureDate);
+		//	q.setParameter("departDate", departureDate);
 			return q.getResultList();
 	  
 	 }

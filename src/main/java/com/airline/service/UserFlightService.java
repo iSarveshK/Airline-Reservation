@@ -19,10 +19,10 @@ public class UserFlightService implements UserFlightServiceInterface {
 	@Autowired
 	private UserFlightRepoInterface userFlightRepoInterface;
 	
-	public List<FlightSchedule> SearchFlightSchedule(String source, String destination,LocalDate departureDate)
+	public List<FlightSchedule> SearchFlightSchedule(String source, String destination) //,LocalDate departureDate
 	{
 		
-		return userFlightRepoInterface.SearchFlightSchedule(source, destination, departureDate);
+		return userFlightRepoInterface.SearchFlightSchedule(source, destination); //, departureDate
 	}
 
 }

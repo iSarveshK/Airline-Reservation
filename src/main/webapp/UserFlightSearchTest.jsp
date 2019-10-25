@@ -11,7 +11,7 @@
 
 source: <input type ="text" name="source"/><br/>
 destination: <input type ="text" name="destination"/><br/>
-departure dates: <input type ="date" name="departureDate"/><br/>
+<!-- departure dates: <input type ="date" name="departureDate"/><br/> -->
 
 <button type="submit">Submit</button>
 

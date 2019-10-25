@@ -12,15 +12,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${ flightScheduleInformation }" var="flightSchedule">
-${ flightSchedule.source }  
-${ flightSchedule.destination } 
-${ flightSchedule.departureDate } 
-${ flightSchedule.arrivalDate } 
-${ flightSchedule.departureTime } 
-${ flightSchedule.arrivalTime } 
-${ flightSchedule.economySeatsAvailable } 
-${ flightSchedule.businessSeatsAvailable } 
+<c:forEach items="${ searchFlightResults }" var="flightSchedules">
+${ flightSchedules.source }  
+${ flightSchedules.destination } 
+${ flightSchedules.departureDate } 
+${ flightSchedules.arrivalDate } 
+${ flightSchedules.departureTime } 
+${ flightSchedules.arrivalTime } 
+${ flightSchedules.economySeatsAvailable } 
+${ flightSchedules.businessSeatsAvailable } 
 </c:forEach>
 
 </body>
