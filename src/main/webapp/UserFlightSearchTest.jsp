@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method ="GET" action="viewflightInfo.airline">
+<form method ="GET" action="UserSearchFlight.airline">
+
+source: <input type ="text" name="source"/><br/>
+destination: <input type ="text" name="destination"/><br/>
+departure dates: <input type ="date" name="departureDate"/><br/>
 
 <button type="submit">Submit</button>
-</form>
+
 </body>
 </html>

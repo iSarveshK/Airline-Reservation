@@ -18,6 +18,7 @@ border:1px black solid;
 </style>
 </head>
 <body>
+
 <table class="view" border="1px black solid">
 <th>
 <tr>
@@ -36,7 +37,7 @@ border:1px black solid;
 
 <c:forEach items="${ flightScheduleInformation }" var="flightSchedule">
 <tr>
-<td>${ flightSchedule.source }  </td>
+<td>${ flightSchedule.source } </td> 
 <td>${ flightSchedule.destination } </td>
 <td>${ flightSchedule.departureDate } </td>
 <td>${ flightSchedule.arrivalDate } </td>
@@ -44,10 +45,8 @@ border:1px black solid;
 <td>${ flightSchedule.arrivalTime } </td>
 <td>${ flightSchedule.economySeatsAvailable } </td>
 <td>${ flightSchedule.businessSeatsAvailable } </td>
-</tr>
-
 </c:forEach>
+</tr>
 </tbody>
-</table>
 </body>
 </html>

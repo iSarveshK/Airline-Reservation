@@ -9,18 +9,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.finfo{
+float:center;
+}
+table{
+border-collapse: collapse;
+border:1px black solid;
+}
+th{
+height:30px
+ padding: 15px;
+  text-align:center;
+}
+</style>
 </head>
 <body>
 
-
+<table class="finfo" >
+<th>
+<tr>
+<th> Flight Number </th>
+<th> Flight Name</th>
+<th> Total economy  seats</th>
+<th> Total business seats</th>
+</tr>
+</th>
+<tbody>
 <c:forEach items="${ flightInformation }" var="flight">
-
-${ flight.flightNumber }  
-${ flight.flightName } 
-${ flight.economySeats} 
-${ flight.businessSeats } 
-
+<tr>
+<td>${ flight.flightNumber }  </td>
+<td>${ flight.flightName } </td>
+<td>${ flight.economySeats} </td>
+<td>${ flight.businessSeats } </td>
+</tr>
 
 </c:forEach>
+</tbody>
+</table>
 </body>
 </html>
+
+
+
+
+
+

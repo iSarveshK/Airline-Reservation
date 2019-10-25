@@ -10,12 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="UserSearchFlight.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
-    <script src>
-function hideFunction() { 
-            element = document.getElementById('returndate'); 
-            element.style.visibility = 'hidden'; 
-        } 
-    </script>
+   
 </head>
 
 <body>
@@ -23,7 +18,7 @@ function hideFunction() {
                 <div class="logo">
                     <a> <img src="C:\Users\Hi\Desktop\Airline\logo.png" alt="logo" ></a>
                       </div>
-                
+                <div>
                 <ul>
                       <li class="name">
                         <a href="" class="dropbtn">Hi ${username}</a>
@@ -32,10 +27,20 @@ function hideFunction() {
                         </div>
                       </li>
                     </ul>
+                    </div>
+                    
+                    <div>
+                    <ul>
+                    <li class="contact">
+                    <a href="contactUs.jsp">Contact Us</a>
+                    </ul>
+                    
+                    </div>
+                    
                 </div>
             
     <div class="form" >
-    <form action="searchflight.html">
+    <form  method ="GET" action="">
         <div style="float: left;width: 100%;height: 50px;">
            <div  style="float: left;width: 50%;"> 
                <input type="radio" name="journey" onclick="hideFunction()" >One Way
