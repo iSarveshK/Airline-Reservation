@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form method ="GET" action="UserCitySelect.airline">
 
+
+<button type="submit">Submit</button>
+</form>
 </body>
 </html>

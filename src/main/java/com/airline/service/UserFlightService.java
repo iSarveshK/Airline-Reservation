@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.airline.model.CityInfo;
 import com.airline.model.FlightSchedule;
 import com.airline.repository.AdminPanelRepoInterface;
 import com.airline.repository.UserFlightRepoInterface;
@@ -23,6 +24,12 @@ public class UserFlightService implements UserFlightServiceInterface {
 	{
 		
 		return userFlightRepoInterface.SearchFlightSchedule(source, destination, departureDate); //
+	}
+	
+	public List<CityInfo> getCities(){
+		
+		return userFlightRepoInterface.getCities();
+		
 	}
 
 }

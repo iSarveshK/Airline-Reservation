@@ -34,15 +34,10 @@ public class UserFlightRepository implements UserFlightRepoInterface {
 	 }
 	
 	 @Override
-	 public List<CityInfo> SearchFlightSchedule(String source, String destination ,LocalDate departureDate){
+	 public List<CityInfo> getCities(){
 		
-			String jpql= "select fs from FlightSchedule fs where fs.source like :src and fs.destination like :dest and fs.departureDate like :departDate";
-			
-			//
+			String jpql= "select ci.cityName from CityInfo ci";
 			Query q=entityManager.createQuery(jpql);
-			q.setParameter("src", source);
-			q.setParameter("dest", destination);
-			q.setParameter("departDate", departureDate);
 			return q.getResultList();
 	  
 	 }

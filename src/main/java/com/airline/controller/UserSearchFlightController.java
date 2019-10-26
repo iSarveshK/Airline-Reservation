@@ -37,10 +37,11 @@ public class UserSearchFlightController {
 	@RequestMapping(path = "/UserCitySelect.airline", method = RequestMethod.GET)
 	public String getCities(Map model){
 	List <CityInfo> citiesList =  userFlightServiceInterface.getCities();
+	System.out.println(citiesList.get(0));
 	
-	model.put("searchFlightResults", searchFlightResultsList);
+	model.put("cityList", citiesList);
 
-	return "UserFlightSearchResults.jsp";
+	return "CitySelectResult.jsp";
 		
 	}
 	

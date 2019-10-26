@@ -8,31 +8,34 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Tbl_City_Info")
+@Table(name="TBL_CITY_INFO")
 public class CityInfo {
 	
 	@Id
-	@Column(name="City_Id")
+	@Column(name="CITY_ID")
 	private int cityId;
 	
-	@Column(name="City_Name")
+	@Column(name="CITY_NAME")
 	private String cityName;
-	
-	
-	
-	
+
 	public int getCityId() {
 		return cityId;
 	}
+
 	public void setCityId(int cityId) {
 		this.cityId = cityId;
 	}
+
 	public String getCityName() {
 		return cityName;
 	}
+
 	public void setCityName(String cityName) {
 		this.cityName = cityName;
 	}
+	
+	
+	
 	
 	
 

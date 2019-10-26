@@ -11,14 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<select>
-
-<c:forEach items="${ flightnumbers }" var="flightNumber">
-
-<option value =	${ flightNumber.flightNumber } > ${ flightNumber.flightNumber } </option>
-
-
+<c:forEach items=" ${cityList} " var="city">
+${ city.cityName }
 </c:forEach>
-</select>
+
 </body>
 </html>
