@@ -36,7 +36,7 @@ public class UserFlightRepository implements UserFlightRepoInterface {
 	 @Override
 	 public List<CityInfo> getCities(){
 		
-			String jpql= "select ci.cityName from CityInfo ci";
+			String jpql= "select ci from CityInfo ci";
 			Query q=entityManager.createQuery(jpql);
 			return q.getResultList();
 	  

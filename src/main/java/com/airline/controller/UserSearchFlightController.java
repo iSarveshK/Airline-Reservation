@@ -34,7 +34,7 @@ public class UserSearchFlightController {
 	}
 	
 	
-	@RequestMapping(path = "/UserCitySelect.airline", method = RequestMethod.GET)
+	@RequestMapping(path = "/UserCitySelect.airline", method = RequestMethod.POST)
 	public String getCities(Map model){
 	List <CityInfo> citiesList =  userFlightServiceInterface.getCities();
 	System.out.println(citiesList.get(0));
