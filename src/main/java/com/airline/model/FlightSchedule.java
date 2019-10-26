@@ -49,11 +49,7 @@ public class FlightSchedule {
 	@Column(name = "STATUS")
 	private String status;
 	
-	/*
-	@ManyToOne
-	@JoinColumn(name="cityName")
-	private CityInfo cityInfo;
-	 */
+
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="FLIGHT_NUMBER")

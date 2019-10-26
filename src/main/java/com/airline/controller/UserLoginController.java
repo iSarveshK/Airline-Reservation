@@ -32,7 +32,7 @@ public class UserLoginController {
 		if(check != null){
 		
 			modelMap.addAttribute("userLogin",check);
-			return "redirect:/UserSearchFlight.jsp";
+			return "redirect:/showAddSchedule.airline";
 		}
 	
 		else{

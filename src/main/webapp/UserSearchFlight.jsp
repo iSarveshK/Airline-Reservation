@@ -40,7 +40,7 @@
                 </div>
             
     <div class="form" >
-    <form  method ="GET" action="">
+    <form  method ="GET" action="/UserSearchFlight.airline">
         <div style="float: left;width: 100%;height: 50px;">
            <div  style="float: left;width: 50%;"> 
                <input type="radio" name="journey" onclick="hideFunction()" >One Way
@@ -50,18 +50,15 @@
             </div>
         </div>
         <div>
-            <input type="text" name="from" placeholder="From">
-            <input type="text" name="to" placeholder="To">
+            <input type="text" name="source" placeholder="From">
+            <input type="text" name="destination" placeholder="To">
         </div>
         <div>
             <div>
                     <label>Departure Date</label>
-                <input type="date" name="depart">
+                <input type="date" name="departureDate">
                 </div>
-                <div id="returndate">
-                <label >Return Date</label>
-                <input type="date" name="return" >
-            </div>
+               
             <div style="float: left;width: 100%;height: 50px;">
                 <div style="float: left;width: 30%;">
                     Adult
