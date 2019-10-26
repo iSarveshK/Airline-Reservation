@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.airline.dto.UserFlightSearchDto;
+import com.airline.model.CityInfo;
 import com.airline.model.FlightInfo;
 import com.airline.model.FlightSchedule;
 import com.airline.service.UserFlightServiceInterface;
@@ -33,6 +34,15 @@ public class UserSearchFlightController {
 	}
 	
 	
+	@RequestMapping(path = "/UserCitySelect.airline", method = RequestMethod.GET)
+	public String getCities(Map model){
+	List <CityInfo> citiesList =  userFlightServiceInterface.getCities();
+	
+	model.put("searchFlightResults", searchFlightResultsList);
+
+	return "UserFlightSearchResults.jsp";
+		
+	}
 	
 	
 	

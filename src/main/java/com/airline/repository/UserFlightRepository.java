@@ -10,6 +10,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
+import com.airline.model.CityInfo;
 import com.airline.model.FlightSchedule;
 
 @Repository
@@ -32,6 +33,19 @@ public class UserFlightRepository implements UserFlightRepoInterface {
 	  
 	 }
 	
+	 @Override
+	 public List<CityInfo> SearchFlightSchedule(String source, String destination ,LocalDate departureDate){
+		
+			String jpql= "select fs from FlightSchedule fs where fs.source like :src and fs.destination like :dest and fs.departureDate like :departDate";
+			
+			//
+			Query q=entityManager.createQuery(jpql);
+			q.setParameter("src", source);
+			q.setParameter("dest", destination);
+			q.setParameter("departDate", departureDate);
+			return q.getResultList();
+	  
+	 }
 	
 	
 	
