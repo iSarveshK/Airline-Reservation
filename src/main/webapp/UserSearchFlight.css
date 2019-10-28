@@ -40,6 +40,24 @@
     color: #b3b3b3;
     font-size: 12px;
   }
+  
+  .city{
+  width: 20%;
+  }
+  
+  .cit{
+  width: 20%;
+  }
+  
+  .city select{
+  display:inline-block;
+    margin: 15px 108px;
+  }
+
+  .cit select{
+    margin: 15px 108px;
+  }
+
   .form .message a {
     color: #4CAF50;
     text-decoration: none;

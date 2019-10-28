@@ -79,7 +79,7 @@ public class AdminPanelController {
 		
 		adminPanelServiceInterface.addFlightSchedule(fs);
 
-		return "FlightAddSchedule.jsp";
+		return "Confirmation.jsp";
 			
 		}
 		
@@ -103,7 +103,7 @@ public class AdminPanelController {
 	
 		List<FlightInfo> flightInfoObj =  adminPanelServiceInterface.listFlightInfo();
 		
-
+System.out.println("Kashika view flight");
 		model.put("flightInformation", flightInfoObj);
 	
 		return "viewFlightInfo.jsp";

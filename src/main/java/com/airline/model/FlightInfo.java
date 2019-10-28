@@ -26,7 +26,7 @@ public class FlightInfo {
 	
 	@Column(name = "FLIGHT_NAME")
 	private String flightName;
-	@Column(name = "TOTAL_SEAT_ECO")
+	@Column(name = "TOTAL_SEAT_ECONOMY")
 	private int  economySeats;
 	@Column(name = "TOTAL_SEAT_BUSINESS")
 	private int  businessSeats;

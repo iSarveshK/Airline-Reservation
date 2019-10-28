@@ -27,7 +27,7 @@
            
  
    		 
-   		 <bean id="myEmf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+   		 <bean id="myEmf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" scope="prototype">
    			<property name="dataSource" ref="oracleDS" /><!-- Database settings -->
     		<property name="packagesToScan" value="com.airline.model" /> <!--  @Entity Class Location-->
    		 	<property name="jpaVendorAdapter">

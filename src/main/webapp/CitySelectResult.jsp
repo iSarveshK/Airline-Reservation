@@ -19,7 +19,7 @@
 </c:forEach>
 </select>
 <select>
-<c:forEach  var="cities" items="${cityList}">
+<c:forEach  var="cities" items=	"${cityList}">
 <option value =	${  cities.cityName } > ${ cities.cityName } </option>
 
 </c:forEach>

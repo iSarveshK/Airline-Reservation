@@ -31,8 +31,8 @@ height:30px
 <tr>
 <th> Flight Number </th>
 <th> Flight Name</th>
-<th> Total economy  seats</th>
-<th> Total business seats</th>
+<th> Total Business seats</th>
+<th> Total Economy seats</th>
 </tr>
 </th>
 <tbody>
@@ -40,8 +40,8 @@ height:30px
 <tr>
 <td>${ flight.flightNumber }  </td>
 <td>${ flight.flightName } </td>
-<td>${ flight.economySeats} </td>
-<td>${ flight.businessSeats } </td>
+<td>${ flight.businessSeats} </td>
+<td>${ flight.economySeats } </td>
 </tr>
 
 </c:forEach>

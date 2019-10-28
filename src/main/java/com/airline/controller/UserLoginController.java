@@ -18,7 +18,7 @@ import com.airline.service.AdminLoginService;
 import com.airline.service.UserLoginService;
 
 @Controller
-@SessionAttributes("userLogin")
+@SessionAttributes("userLoggedIn")
 
 public class UserLoginController {
 	
@@ -31,8 +31,8 @@ public class UserLoginController {
 		User check=userloginService.checkLogin(email, password);
 		if(check != null){
 		
-			modelMap.addAttribute("userLogin",check);
-			return "redirect:/showAddSchedule.airline";
+			modelMap.addAttribute("userLoggedIn",check);
+			return "redirect:/user_dashboard.jsp";
 		}
 	
 		else{
@@ -49,7 +49,7 @@ public class UserLoginController {
 	public String logout(ModelMap model,HttpSession session){
 		model.clear();
 		session.invalidate();
-		return "redirect:/login.jsp";
+		return "redirect:/UserLogin.jsp";
 	}
 		
 	}

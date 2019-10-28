@@ -51,7 +51,7 @@ display:block;
   <br/>
   <br/>
   <div>
-        <form action="viewflightInfo.airline">
+        <form action="viewflightInfo.airline"   method = "get">
        <input class="textbtn" type="submit" value="View Flight Information"></input>
         </form>
         

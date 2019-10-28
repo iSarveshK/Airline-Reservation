@@ -23,18 +23,18 @@
   
 <div class="container">
     
-<form class="form"method="POST" action="addFlightSchedule.html">
+<form class="form" method="post" action="adminpanel.airline">
 <table>
 <tr>
 <td><label>Flight Number</label></td>
 <td>
-<input type= "text" name="flightno" value="" /><br/><br/>
+<input type= "text" name="flightNumber"  /><br/><br/>
 </td>
 </tr>
 <tr>
 <td><label>Flight Name</label></td>
 <td>
-<input type= "text" name="f_name" value=""><br/><br/>
+<input type= "text" name="flightName"><br/><br/>
 </td>
 </tr>
 
@@ -47,19 +47,20 @@
 <tr>
 -->
     <td><label>Total Business Class Seats</label></td>
-    <td><input type= "number" name="b_seats" value=""></input><br/><br/>
+    <td><input type= "number" name="businessSeats"></input><br/><br/>
     </td>
 </tr>
 <tr>
         <td><label>Totatl Economy class seats</label></td>
-        <td><input type= "number" name="e_seats" value=""></input><br/><br/>
+        <td><input type= "number" name="economySeats"></input><br/><br/>
         </td>
 </tr>
 
 
 </table>
-<button type = "submit" formaction="">Continue..</button><br/><br/>
-<button type = "submit" formaction="admin_panel.html">Submit</button>
+
+<button type = "submit" >Continue TO ADD SCHEDULE..</button><br/><br/>
+
 </form>
 </div>
 
