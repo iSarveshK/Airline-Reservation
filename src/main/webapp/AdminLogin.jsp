@@ -14,40 +14,42 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-     <link rel='stylesheet' type='text/css' media='screen' href='UserLogin.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='UserLogin.css'>
+    
     <script src='main.js'></script>
- 
-      <base href="/airline-reservation/">
-      
-      
-      
+    <base href="/airline-reservation/">
 </head>
+
 
 <body bgcolor="lightgrey">
     <div class="navbar">
-        <div style="width:100%;height:20px;float:inherit ;display: inline-block">
+        <div style="width:100%;height:inherit;float:inherit ;display: inline-block">
 <div class="logo">
           <img src="<c:url value="/resources/images/logo.png"/>"/>
                       </div>
+         <div class="Udaan" style="width:35%;margin: 30px 480px;">
+                  <h1> Hello Admin</h1>
+              <div class="contact">
+                  <a href="contactUs.html" >Contact Us</a>
+              </div>
+        
         </div>
     </div>
+        
    
-<div class="container">
+    <div class="container">
         <div class="form">
-          <form class="login-form" action="register.airline" method="post" onsubmit="return validateRegistrationForm()" name="registrationForm">
-            <input type="text" name="firstName" placeholder="First Name" required/>
-            <input type="text" name="lastName" placeholder="Last Name" required/>
-            <input type="email" name="email" placeholder="E-MAIL" required/>
-            <input type="password" name="fpassword" placeholder="Password" required/>
-           
-            <input type="date" name="dateOfBirth" placeholder="dob" required/><br/><br/>
-            <div class="custom-select" style="width:200px;">
- 
-            <input type="tel"  name="phone"  placeholder="Phone" required/>
-           <button type="submit"> Register</button></a>
+          <form class="login-form" action="adminPanel.jsp" method="POST">
+            <input type="email" name="email" placeholder="Admin ID" required/>
+            <input type="password" name="password" placeholder="Password" required/>
+            <button type="submit" >Login</button>
           </form>
         </div>
       </div>
+      
+      
+      <footer>
+        <p>Copyright Reserved @Udaan.com</p>
+    </footer>
 </body>
 </html>

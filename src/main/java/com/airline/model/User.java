@@ -35,7 +35,7 @@ public class User {
 	private String password;
 	
 	@Column(name="DATE_OF_BIRTH")
-	@DateTimeFormat(pattern="yyyy-mm-dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate dateOfBirth;
 	
 	@Column(name="PHONE_NO")

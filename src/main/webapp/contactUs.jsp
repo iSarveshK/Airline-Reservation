@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
-<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+    <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
@@ -26,28 +25,15 @@
 
 <body bgcolor="lightgrey">
     <div class="navbar">
-        <div style="width:100%;height:20px;float:inherit ;display: inline-block">
+        <div style="width:100%;height:inherit;float:inherit ;display: inline-block">
 <div class="logo">
           <img src="<c:url value="/resources/images/logo.png"/>"/>
                       </div>
         </div>
     </div>
-   
-<div class="container">
-        <div class="form">
-          <form class="login-form" action="register.airline" method="post" onsubmit="return validateRegistrationForm()" name="registrationForm">
-            <input type="text" name="firstName" placeholder="First Name" required/>
-            <input type="text" name="lastName" placeholder="Last Name" required/>
-            <input type="email" name="email" placeholder="E-MAIL" required/>
-            <input type="password" name="fpassword" placeholder="Password" required/>
-           
-            <input type="date" name="dateOfBirth" placeholder="dob" required/><br/><br/>
-            <div class="custom-select" style="width:200px;">
- 
-            <input type="tel"  name="phone"  placeholder="Phone" required/>
-           <button type="submit"> Register</button></a>
-          </form>
-        </div>
-      </div>
+  
+    <footer>
+        <p>Copyright Reserved @Udaan.com</p>
+    </footer>
 </body>
 </html>

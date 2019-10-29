@@ -3,15 +3,15 @@ ol, ul { list-style: none; }
 a { text-decoration:none; color: #39464E;}
 
 body {
-  background: #fff;
-  font-size: 13px;
-  color: #39464E;  
+  background:lightcyan;
+  font-size: 16px;
+  color: black;  
 }
 body:before {
     content: " ";
     display: block;
     height: 8px;
-    background: #3A474F;
+    background: rgb(5, 6, 7);
     position: fixed;
     z-index: 40;
     width: 100%;
@@ -37,19 +37,24 @@ body:before {
       margin-top: 30px;
       margin-right: 40px;
   }
-  .contentWrap h1 {
+  .contentWrap h1{
     display: block;
     height: 80px;
     width: 80px;
     position: absolute;
     top: 48px;
-    left: -110px;
-    background-color: #1C90F3;
+    left: 149px;
+    color: black;
   }
+
+  .contentWrap h3,h2{
+    color: black;
+
+  }  
 
 .sidebarWrap {
     float: right;
-    width: 30%;
+    width: 23%;
     background:lightcoral;
     position: fixed;
     top: 0;
@@ -68,6 +73,7 @@ body:before {
       border-bottom: solid 1px #D2D5DB;
       padding: 20px 0 20px 20px;
       clear: both;
+      margin-top:250px;
   }
 .commonNav {
     height: 40px;
@@ -129,4 +135,21 @@ footer {
 
 footer p {
     margin: 10px 0;
+}
+.textbtn{
+border-radius: 12px;
+color:black;
+padding: 18px 28px;
+margin:auto;
+width: 250px;
+background-color: grey;
+}
+
+.form{
+  margin-top:50px;
+  padding: 0px 12px;
+}
+.head{
+  color:black;
+  font-size: 15px;
 }

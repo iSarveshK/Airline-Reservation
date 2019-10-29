@@ -4,7 +4,6 @@
   padding-right: 30px;
   margin: auto;
   height: 100%;
-  background-image: url("/resources/images/p2.jpg");
 }
 
 body {
@@ -272,7 +271,7 @@ body{
 
   height: 100px;
   width: 100%;
-  background-color:deepskyblue;
+  background-color:lightcoral;
 }
 
 img{
@@ -285,16 +284,3 @@ img{
   float:left;
 }
   
-  .logout{
-  float:right;
-  margin-right:20px;
-  margin-top:30px;
-  }
-  
-  
-  .name_k{
-      width: 20;
-      float:right;
-      margin-top:10px;
-      margin-right:60px;
-  }

@@ -32,7 +32,7 @@ public class UserLoginController {
 		if(check != null){
 		
 			modelMap.addAttribute("userLoggedIn",check);
-			return "redirect:/user_dashboard.jsp";
+			return "redirect:/userPanel.jsp";
 		}
 	
 		else{
@@ -41,7 +41,7 @@ public class UserLoginController {
 		}
 		} catch (Exception e) {
 			modelMap.put("error", e.getMessage());
-			return "failure.jsp";
+			return "UserLogin.jsp";
 		}
 	}
 	

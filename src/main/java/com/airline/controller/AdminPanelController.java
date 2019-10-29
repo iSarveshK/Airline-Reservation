@@ -45,7 +45,7 @@ public class AdminPanelController {
 		adminPanelServiceInterface.addFlight(f);
 		//adminPanelServiceInterface.listFlightNumber();
 		
-		
+		System.out.println("hii");
 		return "redirect:/showAddSchedule.airline";
 			
 		}
@@ -103,7 +103,7 @@ public class AdminPanelController {
 	
 		List<FlightInfo> flightInfoObj =  adminPanelServiceInterface.listFlightInfo();
 		
-System.out.println("Kashika view flight");
+
 		model.put("flightInformation", flightInfoObj);
 	
 		return "viewFlightInfo.jsp";

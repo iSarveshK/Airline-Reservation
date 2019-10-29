@@ -15,6 +15,7 @@ import com.airline.model.FlightSchedule;
 
 
 @Repository
+@Transactional
 public class AdminPanelRepository implements AdminPanelRepoInterface{
 	
 	@PersistenceContext
@@ -23,7 +24,9 @@ public class AdminPanelRepository implements AdminPanelRepoInterface{
 	@Transactional
 	@Override
 	public void addNewFlight(FlightInfo flightInfo) {
-		entityManager.merge(flightInfo);
+		entityManager.persist(flightInfo);
+	
+		System.out.println("repo");
 	}
 	
 	@Transactional

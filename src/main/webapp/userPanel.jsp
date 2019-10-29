@@ -17,44 +17,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Dashboard | Udaan </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="adminPanel.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="userPanel.css" />
     <script src="main.js"></script>
-         <base href="/airline-reservation/">
+        <base href="/airline-reservation/">
+  
 </head>
 <body>
-    <div class="body">
+  
     <div class="contentWrap">
+      <div class="icon">
+        <img src="icon.jpg" alt="icon">
+      </div>
         <div id="content">
           
           <div class="head">
-          <h1>Welocme</h1><br><hr>
+          <h1>Welocme</h1><hr>
          <h3>${userLoggedIn.firstName} &nbsp; ${userLoggedIn.lastName}</h3><br/><hr>
-         </div>
+         Email-Id:
+         <h2>${userLoggedIn.email}</h2>
+         Phone : 
+          <h2>${userLoggedIn.phone}</h2> 
+          </div>
         </div>
         
       </div>
       <div class="sidebarWrap">
-            
-       <div class="icon">
-            <img src="<c:url value="/resources/images/download.jpg"/>"/>
-                        </div>
-                        
-            <div class="form">
-                  <form action="viewflightInfo.airline" method="get">
-                 <input class="textbtn" type="submit" value="View Flight Information"></input>
-                  </form>
-                  
-                     <form action="viewflightSchedule.airline" method="get">
-                 <input class="textbtn" type="submit" value="View Flight Schedule"></input>
-                  </form>
-                  
-                     <form action="AddFlight.jsp" method="GET">
-                 <input class="textbtn" type="submit" value="Add Flight"></input>
-                  </form>
-                  
-                  
-                  </div>
-                </div>
-            </div>
+        <div id="sidebar">
+           <div class="form">
+          <form action="user-logout.airline" method="POST">
+          <button class="textbtn"  type="submit">Sign Out</button>
+          </form>
+          </div>
+          
+          <div class="form">
+          <form action="UserCitySelect.airline" method="POST">
+          <button class="textbtn"  type="submit">Book Flight</button>
+          </form>
+          </div>
+         
+           <div class="segment">
+             <div id="contactUs">
+       <a href="contactUs.html"> Contact Us </a>
+      </div>
+          </div>
+        </div>
+      </div>
+  <footer>
+        <p>Copyright Reserved @Udaan.com</p>
+    </footer>
+
 </body>
 </html>

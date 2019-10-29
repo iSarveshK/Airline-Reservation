@@ -83,14 +83,7 @@ public class FlightInfo {
 		this.businessSeats = businessSeats;
 	}
 
-	/*public Set<FlightSchedule> getFlightSchedule() {
-		return flightSchedules;
-	}
-
-	public void setFlightSchedule(Set<FlightSchedule> flightSchedules) {
-		this.flightSchedules = flightSchedules;
-	}
-	*/
+	
 	
 	
 	

@@ -41,7 +41,7 @@ public class UserRegisterController {
 		userRegisterService.register(user1);
 		
 		model.addAttribute("user", user1);
-		return "redirect:/confirmation.jsp"; 
+		return "Confirmation.jsp"; 
 		
 	
 		}

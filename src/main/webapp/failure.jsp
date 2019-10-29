@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Failure
+Fa
 <p>${ error }</p> 
 </body>
 </html>

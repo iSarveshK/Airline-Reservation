@@ -5,49 +5,106 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix = "spring"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix = "form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+     <base href="/airline-reservation/">
+     <link rel="stylesheet" type="text/css" media="screen" href="viewFlightInfo.css" />
 <title>Insert title here</title>
-<style>
-table{
-border-collapse: collapse;
-border:1px black solid;
-}
-</style>
 </head>
-<body>
-<table class="view" border="1px black solid">
-<th>
-<tr>
-<th> Source</th>
-<th> Destination </th>
-<th> Departure Date</th>
-<th> Arrival Date</th>
-<th> Departure Time</th>
-<th> Arrival Time</th>
-<th> Available Economy Seats</th>
-<th> Available Business Seats</th>
 
-</tr>
-</th>
-<tbody>
+<body bgcolor="lightgrey">
+    <div class="navbar">
+        <div style="width:100%;height:inherit;float:inherit ;display: inline-block">
+<div class="logo">
+          <img src="<c:url value="/resources/images/logo.png"/>"/>
+                      </div>
+        
+        </div>
+    </div>
+   
+<div class="flight_details">
+<div class="flight-card">
+        <div class="column">
+        <div class="card">Source</div>
+        </div>
 
+ <div class="column">
+            <div class="card">Destination</div>
+        </div>
+        
+         <div class="column">
+          <div class="card">Departure Date</div>
+        </div>
+        
+         <div class="column">
+       <div class="card">Arrival Date</div>
+        </div>
+        
+         
+         <div class="column">
+       <div class="card">Departure Time</div>
+        </div>
+         
+         <div class="column">
+       <div class="card">Arrival Time</div>
+        </div>
+         
+         <div class="column">
+       <div class="card">Economy Seats Available</div>
+        </div>
+         
+         <div class="column">
+       <div class="card">Business Seats Available</div>
+        </div>
+        
+
+</div>
+
+<div class="flight_details">
 <c:forEach items="${ flightScheduleInformation }" var="flightSchedule">
-<tr>
-<td>${ flightSchedule.source }  </td>
-<td>${ flightSchedule.destination } </td>
-<td>${ flightSchedule.departureDate } </td>
-<td>${ flightSchedule.arrivalDate } </td>
-<td>${ flightSchedule.departureTime } </td>
-<td>${ flightSchedule.arrivalTime } </td>
-<td>${ flightSchedule.economySeatsAvailable } </td>
-<td>${ flightSchedule.businessSeatsAvailable } </td>
-</tr>
+<div class="flight-card">
+        <div class="column">
+        <div class="card">${ flightSchedule.source }  </div>
+        </div>
 
+ <div class="column">
+            <div class="card">${ flightSchedule.destination }</div>
+        </div>
+        
+         <div class="column">
+          <div class="card">${ flightSchedule.departureDate }</div>
+        </div>
+        
+         <div class="column">
+       <div class="card">${ flightSchedule.arrivalDate } </div>
+        </div>
+         
+         <div class="column">
+       <div class="card">${ flightSchedule.departureTime } </div>
+        </div>
+         
+         <div class="column">
+       <div class="card">${ flightSchedule.arrivalTime } </div>
+        </div>
+         
+         <div class="column">
+       <div class="card">${ flightSchedule.economySeatsAvailable }</div>
+        </div>
+         
+         <div class="column">
+       <div class="card">${ flightSchedule.businessSeatsAvailable }</div>
+        </div>
+</div>
 </c:forEach>
-</tbody>
-</table>
+</div>   
+    <footer>
+        <p>Copyright Reserved @Udaan.com</p>
+    </footer>
 </body>
 </html>
+
+

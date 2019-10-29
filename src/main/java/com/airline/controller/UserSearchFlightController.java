@@ -33,6 +33,7 @@ public class UserSearchFlightController {
 
 	List <FlightSchedule> searchFlightResultsList = userFlightServiceInterface.SearchFlightSchedule(data.getSource(),data.getDestination(),LocalDate.parse(data.getDepartureDate()));
 	modelMap.put("searchFlightResults", searchFlightResultsList);
+	//System.out.println(searchFlightResults.size());
 	return "UserFlightSearchResults.jsp";
 		
 	}
@@ -50,7 +51,7 @@ public class UserSearchFlightController {
 	@RequestMapping(path = "/UserFlightForm.airline", method = RequestMethod.GET)
 	public String searchFlightsForm(ModelMap modelMap){
 
-	return "UserFlightSearchTest.jsp";
+	return "UserFlightSearch.jsp";
 		
 	}
 
