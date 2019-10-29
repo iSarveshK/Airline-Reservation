@@ -121,6 +121,13 @@ public class User {
 	public void setPhone(long phone) {
 		this.phone = phone;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", password=" + password + ", dateOfBirth=" + dateOfBirth + ", phone=" + phone
+				+ ", securityQuestionUser=" + securityQuestionUser + ", securityAnswerUser=" + securityAnswerUser + "]";
+	}
 	
 	
 	

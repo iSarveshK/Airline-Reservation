@@ -9,7 +9,7 @@ import com.airline.model.User;
 
 
 
-@Service
+//@Service
 public class MailService {
 	
 

@@ -21,7 +21,7 @@
 </head>
 
 
-<body bgcolor="lightgrey">
+<body bgcolor="lightgrey" style="overflow:scroll;">
     <div class="navbar">
         <div style="width:100%;height:inherit;float:inherit ;display: inline-block">
 <div class="logo">

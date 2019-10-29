@@ -17,7 +17,10 @@ public class RegisterationRepository implements RegisterRepositoryInterface  {
 	@Transactional
 	public void addNewUser(User user) {
 		user.setSecurityQuestionUser("some question");
-		entityManager.persist(user);
+		user.setSecurityAnswerUser("some answer");
+		System.out.println(user);
+		User u = entityManager.merge(user);
+		System.out.println(u);
 		System.out.println("user added successfully");
 	}
 

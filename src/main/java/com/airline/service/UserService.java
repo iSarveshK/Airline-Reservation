@@ -11,7 +11,7 @@ public class UserService {
 		@Autowired
 		private RegisterRepositoryInterface registerationRepository;
 		
-		@Autowired
+		//@Autowired
 		private MailService mailService;
 
 		public void register(User user){
